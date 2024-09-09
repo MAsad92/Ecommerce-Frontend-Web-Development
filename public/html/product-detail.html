@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Listing</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+    <!--Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .img-thumbnail {
+        cursor: pointer;
+        }
+
+        .contact-info h5 {
+            margin-bottom: 10px;
+        }
+
+        .contact-info button {
+            margin-bottom: 10px;
+        }
+
+        #mainImage {
+            cursor: pointer;
+        }
+
+    </style>
+    <script src="product-detail.js"></script>
+</head>
+<body>
+     <!-- Nav Main -->
+   <div class="Search" style="max-width: 100%;;
+   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);">
+       <div class="container d-flex align-items-center" style="height: 86px;">
+        <a href="../index.html"><img src="tycoon.png" alt="Tycoon.com" class="img-fluid" style="max-width: 200px;height:80px"></a>
+           <!--Search bar--> 
+           <div class="position-relative w-75 me-2">
+               <input type="text" class="form-control w-100" placeholder="Search by keyword, listing id, or store name">
+               <i class="fas fa-search search-icon position-absolute"></i>
+           </div>
+           <!--Buttons-->
+           <a href="detail-search.html" class="btn detail-search">Detail Search</a>
+           <nav class="container d-flex" style="padding: 0px 0px 0px 10px;max-width: 330px;max-height: 50px;">
+            <a href="signuppage.html" class=" btn user-btn">Log in</a>
+            <a href="loginpage.html" class="btn user-btn">Register</a>
+            <a href="signuppage.html" class="btn List-btn">Place Free Listing</a>
+        </nav>
+       </div>
+   </div> 
+    <div class="container mt-5">
+        <!-- Vehicle Information -->
+        <div class="row">
+            <div class="col-md-8">
+                <!-- Main Image -->
+                <img id="mainImage" src="product3.jpg" class="img-fluid mb-3" alt="Vehicle Image" data-toggle="modal" data-target="#enlargeImageModal">
+
+                <!-- Thumbnail Images -->
+                <div class="row">
+                    <div class="col-3">
+                        <img src="product3.jpg" class="img-fluid img-thumbnail" onclick="changeImage(this.src)">
+                    </div>
+                    <div class="col-3">
+                        <img src="product5.jpg" class="img-fluid img-thumbnail" onclick="changeImage(this.src)">
+                    </div>
+                    <div class="col-3">
+                        <img src="product6.jpg" class="img-fluid img-thumbnail" onclick="changeImage(this.src)">
+                    </div>
+                    <div class="col-3">
+                        <img src="Product1.jpg" class="img-fluid img-thumbnail" onclick="changeImage(this.src)">
+                    </div>
+                    <div class="col-3">
+                        <img src="Product2.jpg" class="img-fluid img-thumbnail" onclick="changeImage(this.src)">
+                    </div>
+                </div>
+
+                <!-- List Details -->
+                <h5 class="mt-4">List Details</h5>
+                <p>
+                    Bike in excellent condition number nhin laga complete documents no work to do only serious buyers contact.
+                </p>
+            </div>
+
+            <!-- Seller Information -->
+            <div class="col-md-4">
+                <h5>98,000 PKR</h5>
+                <p><strong>Location:</strong> Islamabad / Kashmir Highway / Eighteen</p>
+                <p><strong>Brand:</strong> Honda</p>
+                <p><strong>Model:</strong> CG 125</p>
+                <p><strong>Year:</strong> 2017</p>
+                <p><strong>Kilometers:</strong> 15,582</p>
+                <p><strong>Condition:</strong> Second Hand</p>
+
+                <!-- Contact Information -->
+                <div class="contact-info mt-3">
+                    <h5>Mr Khan</h5>
+                    <p><strong>Membership Date:</strong> 28 January 2024</p>
+                    <p><strong>Mobile:</strong> 313 150 14</p>
+                    <button class="btn btn-success btn-block mt-3">WhatsApp</button>
+                    <button class="btn btn-primary btn-block">Send Message</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Specifications -->
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <h5>Technical Specifications</h5>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Security</th>
+                            <th>Accessory</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ABS</td>
+                            <td>GPS</td>
+                        </tr>
+                        <tr>
+                            <td>Alarm</td>
+                            <td>Grip Heating</td>
+                        </tr>
+                        <tr>
+                            <td>Traction Control</td>
+                            <td>Adjustable Levers</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Enlarge Modal -->
+    <div class="modal fade" id="enlargeImageModal" tabindex="-1" role="dialog" aria-labelledby="enlargeImageModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="" id="enlargedImage" class="img-fluid" alt="Enlarged Image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    
+</body>
+</html>

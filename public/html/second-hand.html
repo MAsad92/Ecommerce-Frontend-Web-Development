@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+    <!--Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .img-thumbnail {
+        cursor: pointer;
+        }
+
+        .contact-info{
+            display: block;
+        }
+
+        .contact-info h5 {
+            margin-bottom: 10px;
+        }
+
+        .contact-info button {
+            margin-bottom: 10px;
+            display: inline;
+        }
+
+        #mainImage {
+            cursor: pointer;
+        }
+
+    </style>
+    <script src="product-detail.js"></script>
+</head>
+<body>
+     <!-- Nav Main -->
+   <div class="Search" style="max-width: 100%;;
+   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);">
+       <div class="container d-flex align-items-center" style="height: 86px;">
+        <a href="../index.html"><img src="tycoon.png" alt="Tycoon.com" class="img-fluid" style="max-width: 200px;height:80px"></a>
+           <!--Search bar--> 
+           <div class="position-relative w-75 me-2">
+               <input type="text" class="form-control w-100" placeholder="Search by keyword, listing id, or store name">
+               <i class="fas fa-search search-icon position-absolute"></i>
+           </div>
+           <!--Buttons-->
+           <a href="detail-search.html" class="btn detail-search">Detail Search</a>
+           <nav class="container d-flex" style="padding: 0px 0px 0px 10px;max-width: 330px;max-height: 50px;">
+                <a href="signuppage.html" class=" btn user-btn">Log in</a>
+                <a href="loginpage.html" class="btn user-btn">Register</a>
+                <a href="signuppage.html" class="btn List-btn">Place Free Listing</a>
+            </nav>
+       </div>
+   </div>
+    <div class="container mt-5">
+        <!-- Vehicle Information -->
+        <div class="row">
+            <div class="col-md-8">
+                <!-- Main Image -->
+                <img id="mainImage" src="detailed images/second-hand1.jpg" class="img-fluid mb-3" alt="Vehicle Image" data-toggle="modal" data-target="#enlargeImageModal">
+
+                <!-- Thumbnail Images -->
+                <div class="row">
+                    <div class="col-3">
+                        <img src="detailed images/second-hand1.jpg" class="img-fluid img-thumbnail" onclick="changeImage(this.src)">
+                    </div>
+                    <div class="col-3">
+                        <img src="detailed images/second-hand2.jpg" class="img-fluid img-thumbnail" onclick="changeImage(this.src)">
+                    </div>
+                    <div class="col-3">
+                        <img src="detailed images/second-hand3.jpg" class="img-fluid img-thumbnail" onclick="changeImage(this.src)">
+                    </div>
+                    <div class="col-3">
+                        <img src="detailed images/second-hand4.jpg" class="img-fluid img-thumbnail" onclick="changeImage(this.src)">
+                    </div>
+                    <div class="col-3">
+                        <img src="detailed images/second-hand5.jpg" class="img-fluid img-thumbnail" onclick="changeImage(this.src)">
+                    </div>
+                </div>
+
+                <!-- List Details -->
+                <h5 class="mt-4">Second Hand Clothes</h5>
+                <p>
+                    Bulk amount of clothes with low prices just wash clean and wear.
+                </p>
+            </div>
+
+            <!-- Seller Information -->
+            <div class="col-md-4">
+                <div style="font-weight: bold;font-size: 16px;margin-bottom: 10px;">Price:&nbsp<span style="text-decoration: underline;font-weight: normal;">1,500 PKR</span></div>
+                <p><strong>Location:</strong> Okara</p>
+                <p><strong>Brand:</strong> Import</p>
+                <p><strong>Condition:</strong> Second Hand</p>
+
+                <!-- Contact Information -->
+                <div class="contact-info mt-3">
+                    <h5 style="font-weight: bold;">Mr Asad</h5>
+                    <p><strong>Membership Date:</strong> 28 January 2024</p>
+                    <p><strong>Mobile:</strong> 0000 000000 0</p>
+                    <button class="btn btn-success btn-block mt-3">WhatsApp</button>
+                    <button class="btn btn-primary btn-block">Send Message</button>
+                    <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54832.77838105155!2d73.4442979!3d30.801270000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3922a75d9a9639e5%3A0xa25a5b6b17fab12b!2sOkara%2C%20Punjab!5e0!3m2!1sen!2s!4v1725478436495!5m2!1sen!2s" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Enlarge Modal -->
+    <div class="modal fade" id="enlargeImageModal" tabindex="-1" role="dialog" aria-labelledby="enlargeImageModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="" id="enlargedImage" class="img-fluid" alt="Enlarged Image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    
+</body>
+</html>
